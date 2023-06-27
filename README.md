@@ -121,3 +121,86 @@ git log
 ```
 git remote add <url>
 ```
+
+
+#  Comandos avanzados
+
+# Eliminar una rama local después de fusionar los cambios en otra rama
+
+```
+git branch -d <rama>
+```
+
+# Eliminar una rama local incluso si no se han fusionado todos los cambios en otra rama
+```
+git branch -D <rama>
+```
+
+# Guarda temporalmente los cambios locales sin realizar un commit
+```
+git stash
+```
+
+# Ver lista de los stash existentes en el repositorio
+```
+git stash list
+```
+# Aplica el stash más reciente y restaura los cambios guardados en el directorio de trabajo actual
+```
+git stash apply
+```
+
+# Aplica el stash más reciente y elimina automáticamente el stash
+```
+git stash pop
+```
+
+#  Aplica los cambios de un commit específico a la rama actual
+```
+git cherry-pick <commit>
+```
+
+# Reescribe el historial de commits para que parezca que la rama actual se ha bifurcado desde la rama especificada en lugar del punto de bifurcación original
+```
+git rebase <rama>
+```
+
+# Deshace los commits posteriores al commit especificado, conservando los cambios en el área de preparación
+```
+git reset <commit>
+```
+
+# Obtiene los últimos cambios del repositorio remoto sin fusionarlos automáticamente
+```
+git fetch
+```
+
+# Muestra las diferencias entre los cambios realizados y el estado actual del repositorio
+```
+git diff
+```
+
+# Muestra quién modificó cada línea de un archivo y en qué commit se realizó el cambio
+```
+git blame <archivo>
+```
+
+# Permite realizar una búsqueda binaria para encontrar el commit que introdujo un bug.
+```
+git bisect
+```
+
+# Muestra un registro detallado de las referencias de Git, incluyendo los cambios de rama y los cambios de HEAD
+```
+git reflog
+```
+
+# Permite trabajar con submódulos, que son repositorios Git dentro de otro repositorio Git.
+```
+git submodule
+```
+
+# Crea un nuevo commit que revierte los cambios introducidos por un commit específico.
+```
+git revert <commit>
+```
